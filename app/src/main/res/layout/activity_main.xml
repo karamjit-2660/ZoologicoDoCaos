@@ -7,13 +7,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp"
+        android:layout_margin="5dp"
+        android:background="@color/black">
+
+
+        <EditText
+            android:id="@+id/textViewEspecie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:hint="Codigo (ex:P01)"
+            android:textColorHint="@color/white"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/textViewHabilidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:hint="Hablidade do Animal"
+            android:textColorHint="@color/white"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"/>
+
+        <Button
+            android:id="@+id/btnProcurar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Procurar"/>
+
+        <EditText
+            android:id="@+id/Resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:textColorHint="@color/white"
+            android:text="" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

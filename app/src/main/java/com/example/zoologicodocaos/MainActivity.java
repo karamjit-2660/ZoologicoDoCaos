@@ -1,6 +1,8 @@
 package com.example.zoologicodocaos;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +17,9 @@ import com.example.zoologicodocaos.models.ZoologicoDoCaos;
 public class MainActivity extends AppCompatActivity {
 
     ZoologicoDoCaos z1;
+    Button btnAdicionar;
+    Button btnProcurar;
+    EditText especie, hablidade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        this.btnAdicionar = findViewById(R.id.btnAdicionar);
+        this.btnProcurar = findViewById(R.id.btnProcurar);
+
+        this.btnAdicionar.setOnClickListener(v -> {
+            //Apanhar o texto
+            String valorEspecie = this.especie.getText().toString();
+
+            Toast.makeText(this, "--> " + valorEspecie, Toast.LENGTH_SHORT).show();
+        });
+
+        this.btnProcurar.setOnClickListener(v -> {
+            Toast.makeText(this, "JAVA", Toast.LENGTH_SHORT).show();
+        });
+
+        this.especie = findViewById(R.id.textViewEspecie);
+
 
         this.buildZoologico();
     }
